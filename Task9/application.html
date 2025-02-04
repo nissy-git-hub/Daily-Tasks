@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicationform</title>
+</head>
+
+<body>
+    <center>
+        <h1>TELANGANA STATE BOARD TRANSPORT CORPORATION</h1>
+        <h1>GENERAL BUS PASS APPLICATION</h1>
+    </center>
+    <form method="get" action="./application.html">
+        <fieldset>
+            <legend>
+                <h3>Applicant Details</h3>
+            </legend>
+            <lable for="Name"><b>Name: </b></lable>
+            <input type="text" id="Name" name="name" pattern="[a-zA-Z]{,20}" required>
+            &nbsp &nbsp
+            <lable for="Fathername"><b>Father's/Gaurdian's Name: </b></lable>
+            <input type="text" id="Fathername" name="fathername" pattern="[a-zA-Z]{,20}" required>
+            <br> <br>
+            <lable for="Dob"><b>Date of Birth: </b></lable>
+            <input type="date" id="Dob" name="Date" required>
+            &nbsp &nbsp
+            <lable for="Gender"><b>Gender</b></lable>
+            <input type="radio" name="gender" value="male" id="Gender" required>Male
+            <input type="radio" name="gender" value="female" id="Gender" required>Female
+            <br> <br>
+            <lable for="age"><b>Age: </b></lable>
+            <input type="text" name="age" id="age" pattern="[0-9]{,2}" title="Please enter valid age" required>
+            &nbsp &nbsp
+            <lable for="Adhaar"><b>Aadhaar No: </b></lable>
+            <input type="text" id="Adhaar" name="Aadhaarnumber" pattern="[0-9]{12}" required>
+            <br> <br>
+            <lable for="Whatsapp"><b>Whatsapp Number: </b></lable>
+            <input type="text" name="number" id="Whatsapp" pattern="\+91[6789][0-9]{9}" required>
+            &nbsp &nbsp
+            <lable for="email"><b>Email id: </b></lable>
+            <input type="mail" name="mail" id="email" pattern="[a-zA-z0-9.!#$%^&*+/=?_'{|}~-]+@[a-z]+com" required>
+            <br> <br>
+            <lable for="myfile"><b>Photo: </b></lable>
+            <input type="file" name="myfile" id="myfile" required>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Residential Address Details</h3>
+            </legend>
+            <label for="Address"><b>Applicant Address: </b></label>
+            <textarea id="Address" name="Address" pattern="[a-zA-z0-9.,/-\()]{20}" required></textarea>
+            &nbsp &nbsp
+            <lable for="district"><b>District: </b></lable>
+            <select name="district" id="district">
+                <option value="hyderabad"><b>Hyderabad</b></option>
+            </select>
+            <br> <br>
+            <lable for="mandal"><b>Mandal: </b></lable>
+            <select name="mandal" id="mandal">
+                <option value="Hyderabad"><b>Hyderabad</b></option>
+            </select>
+            &nbsp &nbsp
+            <lable for="village"><b>Village: </b></lable>
+            <select name="village" id="village">
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <br> <br>
+            <lable for="pincode"><b>Pincode: </b></lable>
+            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}">
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Pass Type Details</h3>
+            </legend>
+            <lable for="city"><b>City</b></lable>
+            <select name=city id="city">
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <br> <br>
+            <lable for="passtype"><b>Pass Type</b></lable>
+            <select name="passtype" id="passtype">
+                <option value="Select">----Select----</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Mode of Payment & Pass Collection</h3>
+            </legend>
+            <lable for="paymentmode"><b>Payment Mode: </b></lable>
+            <select name="paymentmode" id="paymentmode">
+                <option value="select">Select Payment Mode</option>
+            </select>
+            <br> <br>
+            <lable for="passdeliverymode"><b>Pass Delivery Mode: </b></lable>
+            <select name="passdeliverymode" id="passdeliverymode">
+                <option value="select">Select Pass Delivery Mode</option>
+            </select>
+            <br> <br>
+            <lable for="center"><b>Center at which you want to collect Pass: </b></lable>
+            <select name="center" id="center">
+                <option value="select">----Select----</option>
+            </select>
+        </fieldset>
+        <center>
+            <img src="./captcha.png" width="200">
+            <br>
+            <input type="text" name="captcha" pattern="1Cc7yy" required>
+            <br>
+            <input type="Submit">
+        </center>
+    </form>
+</body>
+
+</html>
